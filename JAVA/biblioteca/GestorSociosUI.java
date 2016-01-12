@@ -63,7 +63,7 @@ public class GestorSociosUI extends JFrame {
 				int ind=lstSocios.getSelectedIndex();
 				if(ind>=0){
 				AltaSociosUI frmSocios=new AltaSociosUI(gs);
-				frmSocios.setIndAsig(ind);
+				frmSocios.setIndSocio(ind);
 				frmSocios.setVisible(true);
 				}
 			}
@@ -72,10 +72,21 @@ public class GestorSociosUI extends JFrame {
 		contentPane.add(btnModificar);
 		
 		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ind=lstSocios.getSelectedIndex();
+				gs.delSocio(ind); 
+			}
+		});
 		btnEliminar.setBounds(233, 97, 89, 23);
 		contentPane.add(btnEliminar);
 		
 		JButton btnSalir = new JButton("Salir");
+		btnSalir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				dispose();
+			}
+		});
 		btnSalir.setBounds(233, 144, 89, 23);
 		contentPane.add(btnSalir);
 	}

@@ -19,9 +19,9 @@ public class AltaSociosUI extends JFrame {
 	private JTextField txtNombre;
 	private JTextField txtDir;
 	private JTextField txtTlfno;
-	private int indAsig=-1;
+	private int indSocio=-1;
 	private GestorSocios gs;
-	private JSpinner spinNumMaxPrest;
+
 
 	
 
@@ -120,8 +120,8 @@ public class AltaSociosUI extends JFrame {
 				soc.setDireccion(txtDir.getText());
 				soc.setTlfno(txtTlfno.getText()); 
 				soc.setNumMaxPrest(((Integer)spinNumMaxPrest.getValue()).intValue());
-				if(indAsig>=0){
-					gs.modSocio(indAsig, soc);
+				if(indSocio>=0){
+					gs.modSocio(indSocio, soc);
 				}
 				else{
 					gs.addSocio(soc);
@@ -146,16 +146,14 @@ public class AltaSociosUI extends JFrame {
 	private void cerrarVentana(){
 		this.dispose();
 	}
-	public void setIndAsig(int ind){
-		this.indAsig=ind;
-		JSpinner spinner= this.spinNumMaxPrest;
+	public void setIndSocio(int ind){
+		this.indSocio=ind;
 		Socio soc=gs.getSocio(ind);
 		txtDni.setText(soc.getDni());
 		txtNumSocio.setText(Integer.toString(soc.getNumSocio()));
 		txtNombre.setText(soc.getNombre());
 		txtDir.setText(soc.getDireccion());
-		txtTlfno.setText(soc.getTlfno());
-		
+		txtTlfno.setText(soc.getTlfno());	
 	}
 }
 
