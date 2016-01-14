@@ -155,7 +155,7 @@ public class AltaSociosUI extends JFrame {
 		txtNombre.setText(soc.getNombre());
 		txtDir.setText(soc.getDireccion());
 		txtTlfno.setText(soc.getTlfno());	
-		spinNumMaxPrest.setValue(1);
+		spinNumMaxPrest.setValue(new Integer(soc.getNumMaxPrest()));
 	}
 }
 
