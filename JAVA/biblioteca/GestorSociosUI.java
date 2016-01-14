@@ -75,7 +75,9 @@ public class GestorSociosUI extends JFrame {
 		btnEliminar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int ind=lstSocios.getSelectedIndex();
-				gs.delSocio(ind); 
+				if(ind>=0){
+				gs.delSocio(ind);
+				}
 			}
 		});
 		btnEliminar.setBounds(233, 97, 89, 23);

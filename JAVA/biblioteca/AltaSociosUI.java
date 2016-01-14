@@ -21,6 +21,7 @@ public class AltaSociosUI extends JFrame {
 	private JTextField txtTlfno;
 	private int indSocio=-1;
 	private GestorSocios gs;
+	private JSpinner spinNumMaxPrest;
 
 
 	
@@ -103,7 +104,7 @@ public class AltaSociosUI extends JFrame {
 		lblNummaxprest.setBounds(10, 148, 92, 14);
 		contentPane.add(lblNummaxprest);
 		
-		JSpinner spinNumMaxPrest = new JSpinner();
+		spinNumMaxPrest = new JSpinner();
 		spinNumMaxPrest.setBounds(112, 145, 29, 20);
 		contentPane.add(spinNumMaxPrest);
 		
@@ -154,6 +155,7 @@ public class AltaSociosUI extends JFrame {
 		txtNombre.setText(soc.getNombre());
 		txtDir.setText(soc.getDireccion());
 		txtTlfno.setText(soc.getTlfno());	
+		spinNumMaxPrest.setValue(1);
 	}
 }
 

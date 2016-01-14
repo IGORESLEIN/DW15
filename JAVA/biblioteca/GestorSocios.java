@@ -15,12 +15,12 @@ public void modSocio(int ind,Socio s){
 	lstSocios.setElementAt(s, ind);
 }
 
-public void delSocio(int ind){
-	lstSocios.removeElementAt(ind);
-}
-
 public Socio getSocio(int ind){
 	return lstSocios.getElementAt(ind);
+}
+
+public void delSocio(int ind){
+	lstSocios.removeElementAt(ind);
 }
 
 }
