@@ -1,7 +1,6 @@
 # IGORESLEIN
 **DW15**
 
-Job done in class
-  - java
-  - bootstrap
+(IgorP) significa que son de igor el profesor
+
 
